@@ -95,7 +95,7 @@
                 <version>3.4</version>
                 <configuration>
                     <mojoDependencies>
-                        <param>${groupId}:${artifactId}</param>
+                        <param>${project.groupId}:${project.artifactId}</param>
                     </mojoDependencies>
                 </configuration>
             </plugin>
@@ -173,7 +173,7 @@
 
         <dependency>
             <groupId>com.github.codemonstur</groupId>
-            <artifactId>graal-annotations</artifactId>
+            <artifactId>graalhelper-annotations</artifactId>
             <version>1.0.0</version>
         </dependency>
     </dependencies>
