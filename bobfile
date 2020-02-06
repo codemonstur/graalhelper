@@ -2,9 +2,13 @@ version: 1.0.0
 dependencies:
   - repository: org.ow2.asm:asm-all:5.2
   - repository: com.google.code.gson:gson:2.8.5
-  - project: ../bobthebuilder
+  - project: ../bobthebuildtool
     scope: provided
   - project: ../graalhelper-annotations
+
+build
+	  echo "[${PROJECT_NAME}] Building"
+    run-target -i build
 
 release-notes
 	  echo "[${PROJECT_NAME}] Writing release notes to src/docs/releases/release-${PROJECT_VERSION}.txt"
