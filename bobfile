@@ -1,10 +1,14 @@
+vendor: com.github.codemonstur
+packaging: maven-plugin
 version: 1.0.0
 dependencies:
   - repository: org.ow2.asm:asm-all:5.2
   - repository: com.google.code.gson:gson:2.8.5
-  - project: ../bobthebuildtool
-    scope: provided
   - project: ../graalhelper-annotations
+  - repository: org.apache.maven:maven-plugin-api:3.0
+  - repository: org.apache.maven:maven-project:2.0.6
+  - repository: org.apache.maven.plugin-tools:maven-plugin-annotations:3.4
+    scope: provided
 
 build
     echo "[${PROJECT_NAME}] Building"
