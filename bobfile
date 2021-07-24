@@ -1,3 +1,5 @@
+include https://raw.githubusercontent.com/codemonstur/bobfiles/master/foss-lib-github
+
 vendor: com.github.codemonstur
 packaging: maven-plugin
 version: 1.0.0
@@ -9,23 +11,3 @@ dependencies:
   - repository: org.apache.maven:maven-project:2.0.6
   - repository: org.apache.maven.plugin-tools:maven-plugin-annotations:3.4
     scope: provided
-
-build
-    echo [${PROJECT_NAME}] Building
-    run-target -i clean build
-
-release-notes
-    echo [${PROJECT_NAME}] Writing release notes to src/docs/releases/release-${PROJECT_VERSION}.txt
-    echo ${PROJECT_VERSION} > src/docs/releases/release-${PROJECT_VERSION}.txt
-    echo "" >> src/docs/releases/release-${PROJECT_VERSION}.txt
-    PREVIOUS_TAG = `git tag | sort -r | head -n 1`
-    git log --pretty="%s" ${PREVIOUS_TAG}... master >> src/docs/releases/release-${PROJECT_VERSION}.txt
-
-deploy
-    echo [${PROJECT_NAME}] Clean and build for deploy
-    run-target -i clean build
-    echo [${PROJECT_NAME}] Tagging and pushing to github
-    git tag ${PROJECT_NAME}-${PROJECT_VERSION}
-    git push && git push --tags
-    echo [${PROJECT_NAME}] Creating github release
-    hub release create -a target/${PROJECT_NAME}-${PROJECT_VERSION}.jar -F src/docs/releases/release-${PROJECT_VERSION}.txt ${PROJECT_NAME}-${PROJECT_VERSION}
