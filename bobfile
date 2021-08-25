@@ -4,10 +4,10 @@ vendor: com.github.codemonstur
 packaging: maven-plugin
 version: 1.0.0
 dependencies:
-  - repository: org.ow2.asm:asm-all:5.2
-  - repository: com.google.code.gson:gson:2.8.5
+  - repository: org.ow2.asm:asm-all:6.0_BETA
+  - repository: com.google.code.gson:gson:2.8.8
   - project: ../graalhelper-annotations
-  - repository: org.apache.maven:maven-plugin-api:3.0
-  - repository: org.apache.maven:maven-project:2.0.6
-  - repository: org.apache.maven.plugin-tools:maven-plugin-annotations:3.4
+  - repository: org.apache.maven:maven-plugin-api:3.8.2
+  - repository: org.apache.maven:maven-project:3.0-alpha-2
+  - repository: org.apache.maven.plugin-tools:maven-plugin-annotations:3.6.1
     scope: provided
