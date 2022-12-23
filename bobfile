@@ -3,6 +3,7 @@ include https://raw.githubusercontent.com/codemonstur/bobfiles/master/foss-lib-g
 vendor: com.github.codemonstur
 packaging: maven-plugin
 version: 1.0.0
+release: 11
 dependencies:
   - repository: org.ow2.asm:asm-all:6.0_BETA
   - repository: com.google.code.gson:gson:2.9.1
