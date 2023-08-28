@@ -10,5 +10,5 @@ dependencies:
   - project: ../graalhelper-annotations
   - repository: org.apache.maven:maven-plugin-api:3.8.6
   - repository: org.apache.maven:maven-project:3.0-alpha-2
-  - repository: org.apache.maven.plugin-tools:maven-plugin-annotations:3.7.1
+  - repository: org.apache.maven.plugin-tools:maven-plugin-annotations:3.9.0
     scope: provided
